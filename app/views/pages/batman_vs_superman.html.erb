@@ -1,2 +1,61 @@
-<h1>Pages#batman-vs-superman</h1>
-<p>Find me in app/views/pages/batman-vs-superman.html.erb</p>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+
+		<a href="<%= pages_batman_path%>"><%= image_tag "b1.jpg" %></a>		
+
+		<div class="caption">
+		
+		<h4>Votos: <%= @i_batman.count %></h4>
+
+		<%= form_tag(action: "add_votos_batman") do %>
+		<div>
+			<p><%= label_tag :name, "Nombre" %></p>
+			<p><%= text_field_tag :name %></p>
+		</div>
+		<div>		
+			<p><%= label_tag :email, "Email" %></p>
+			<p><%= text_field_tag :email %></p>
+		</div>
+
+		  <p><%= submit_tag%> "Votar"</p>
+		<% end %>
+
+      </div>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+		
+		<a href="<%= pages_superman_path%>"><%= image_tag "s1.jpg" %></a>	
+
+		<div class="caption">
+
+		<h4>Votos: <%= @i_superman.count %></h4>
+
+		<%= form_tag(action: "add_votos_superman") do %>
+		<div>
+			<p><%= label_tag :name, "Nombre" %></p>
+			<p><%= text_field_tag :name %></p>
+		</div>
+		<div>		
+			<p><%= label_tag :email, "Email" %></p>
+			<p><%= text_field_tag :email %></p>
+		</div>
+
+		  <p><%= submit_tag%> "Votar"</p>
+		<% end %>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
